@@ -11,16 +11,22 @@ let person = { name: 'Peter', age: 28 };
 let { name, age } = person; // Object destructuring assignment
 console.log(name, age);
 
-let output = undefined ?? "string" // -> "string"
-let output1 = null ?? "string" // -> "string"
-let output2 = false ?? "string" // -> false
-let output3 = NaN ?? "string" // -> NaN
+let output1 = undefined ?? "string" // -> "string"
+let output2 = null ?? "string" // -> "string"
+let output3 = false ?? "string" // -> false
+let output4 = NaN ?? "string" // -> NaN
 
-console.log(output, output1, output2, output3);
+console.log(output1, output2, output3, output4);
+
+let output5 = undefined || "string" // -> "string"
+let output6 = null || "string" // -> "string"
+let output7 = false || "string" // -> false
+let output8 = NaN || "string" // -> NaN
+
+console.log(output5, output6, output7, output8);
 
 let budget = 100_000;
 console.log(budget);
-
 
 // PRIVATE METHODS
 class People {
@@ -36,7 +42,7 @@ class People {
 
 const people = new People()
 people.showName()
-people.showAge() 
+//people.showAge() 
 
 
 
